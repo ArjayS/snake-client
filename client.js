@@ -10,9 +10,19 @@ const connect = function () {
   //interpret incoming data as text
   conn.setEncoding("utf8");
 
-  //Added from 'Connect to the Server' Section
+  // //Added from 'Connect to the Server' Section
+  // conn.on("connect", () => {
+  //   console.log("you ded cuz you idled");
+  // });
+
+  // //Added from 'Snake Initials' Section
+  // conn.on("connect", () => {
+  //   console.log("Successfully connected to game server");
+  // });
+
+  //Added from 'Snake Initials' Section
   conn.on("connect", () => {
-    console.log("you ded cuz you idled");
+    conn.write("Name: RCS");
   });
 
   return conn;
