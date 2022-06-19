@@ -23,6 +23,31 @@ const connect = function () {
   //Added from 'Snake Initials' Section
   conn.on("connect", () => {
     conn.write("Name: RCS");
+
+    // //Move Commands Section - Move up
+    // setTimeout(() => {
+    //   conn.write("Move: up");
+    // }, 5000);
+
+    // //Move Commands Section - Move left
+    // setTimeout(() => {
+    //   conn.write("Move: left");
+    // }, 10000);
+
+    // //Move Commands Section - Move down
+    // setTimeout(() => {
+    //   conn.write("Move: down");
+    // }, 15000);
+
+    // //Move Commands Section - Move down
+    // setTimeout(() => {
+    //   conn.write("Move: down");
+    // }, 20000);
+
+    // //Move Commands Section - Move left
+    // setTimeout(() => {
+    //   conn.write("Move: right");
+    // }, 25000);
   });
 
   return conn;
