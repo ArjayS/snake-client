@@ -24,6 +24,22 @@ const connect = function () {
   conn.on("connect", () => {
     conn.write("Name: RCS");
 
+    setTimeout(() => {
+      conn.write("Say: sssss");
+    }, 5000);
+    setTimeout(() => {
+      conn.write("Say: sssss apple");
+    }, 3000);
+    setTimeout(() => {
+      conn.write("Say: hungry");
+    }, 10000);
+    setTimeout(() => {
+      conn.write("Say: yum apple ssss");
+    }, 15000);
+    setTimeout(() => {
+      conn.write("Say: ssssssssssssss");
+    }, 20000);
+
     // //Move Commands Section - Move up
     // setTimeout(() => {
     //   conn.write("Move: up");
@@ -52,5 +68,9 @@ const connect = function () {
 
   return conn;
 };
+
+// process.stdin.on("data", (typedServerMessage) => {
+//   client.write(typedServerMessage);
+// });
 
 module.exports = { connect };
