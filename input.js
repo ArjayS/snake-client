@@ -1,4 +1,10 @@
 const { connect } = require("./client");
+const {
+  move_up_key,
+  move_left_key,
+  move_down_key,
+  move_right_key,
+} = require("./constants");
 
 let connection; // We establish a global variable for the other function to use
 
@@ -26,19 +32,19 @@ const handleUserInput = function (key) {
   }
   if (key === "w") {
     // console.log(`w = "Move: up"`);
-    connection.write("Move: up");
+    connection.write(move_up_key);
   }
   if (key === "a") {
     // console.log(`a = "Move: left"`);
-    connection.write("Move: left");
+    connection.write(move_left_key);
   }
   if (key === "s") {
     // console.log(`s = "Move: down"`);
-    connection.write("Move: down");
+    connection.write(move_down_key);
   }
   if (key === "d") {
     // console.log(`d = "Move: right"`);
-    connection.write("Move: right");
+    connection.write(move_right_key);
   }
 };
 
