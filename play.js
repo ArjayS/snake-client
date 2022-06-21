@@ -3,9 +3,9 @@ const { setupInput } = require("./input");
 
 console.log("Connecting...");
 
-connect();
+const connection = connect(); //Will return the conn value from client.js therefore we need to store the value in a variable
 
-setupInput();
+setupInput(connection); //We are using the connection variable that we establish a value from client.js and using it in the setupInput function
 
 // const stdin = process.stdin;
 // // don't worry about these next two lines of setup work.
