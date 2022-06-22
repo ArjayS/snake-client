@@ -6,44 +6,36 @@ const {
   move_right_key,
 } = require("./constants");
 
-let connection; // We establish a global variable for the other function to use
+let connection;
 
 // setup interface to handle user input from stdin
 const setupInput = (conn) => {
-  // We placed a paramenter called conn within the setupInput function
-  connection = conn; //We created a copy of conn value to the connection global variable. Now the global variable connection has now the same value as conn.
+  connection = conn;
 
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
 
-  //Added on Stdin Setup section
   stdin.on("data", handleUserInput);
 
   return stdin;
 };
 
 const handleUserInput = function (key) {
-  // your code here
-
   if (key === "\u0003") {
     process.exit();
   }
   if (key === "w") {
-    // console.log(`w = "Move: up"`);
     connection.write(move_up_key);
   }
   if (key === "a") {
-    // console.log(`a = "Move: left"`);
     connection.write(move_left_key);
   }
   if (key === "s") {
-    // console.log(`s = "Move: down"`);
     connection.write(move_down_key);
   }
   if (key === "d") {
-    // console.log(`d = "Move: right"`);
     connection.write(move_right_key);
   }
 };
