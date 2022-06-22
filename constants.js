@@ -2,7 +2,7 @@ const IP = "localhost";
 
 const PORT = 50541;
 
-let playerName = "Name: RCS";
+let playerName = "Name: RS";
 
 const move_up_key = "Move: up";
 
